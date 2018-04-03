@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient,HttpHeaders,HttpParams } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { HttpClient,HttpHeaders,HttpParams } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TTL';
+  title = 'app';
   loaded = false;
   rows:Object = [];
   n = 0;

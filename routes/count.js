@@ -52,11 +52,11 @@ router.get('/', function(req,res){
 		words.forEach(function (key) {
 			key = key.toLowerCase();
 			if (wordDictionary.hasOwnProperty(key)) {
-			// i.e === undefined
-			wordDictionary[key]++;
-			maxCount = Math.max(maxCount, wordDictionary[key]);
+				// i.e === undefined
+				wordDictionary[key]++;
+				maxCount = Math.max(maxCount, wordDictionary[key]);
 			} else {
-			wordDictionary[key] = 1;
+				wordDictionary[key] = 1;
 			}
 		});
 		console.log("Max Count is " + maxCount);
