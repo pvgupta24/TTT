@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h3>
+    Welcome to {{ title }}!
+  </h3>
+
+
+  <div class="row center-align">
+    <form class="col s12">
+		<div class="row">
+				<div class="input-field col s6">
+					<input type="number" min="0" id="ip" class="validate" name="n" [(ngModel)]="n">
+					<label for="ip">Enter n</label>
+				</div>
+				<div class="input-field col s2 left-align">
+					<a class="waves-effect waves-light btn-large" (click)="count()">Top n</a>      
+				</div>
+		</div>
+    </form>
+  </div>
+
+<table *ngIf="loaded" class="striped centered responsive-table">
+  <thead class="">
+    <tr>
+        <th>Word</th>
+        <th>Count</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor = "let row of rows">
+      <td>{{row.word|titlecase}}</td>
+      <td>{{row.count}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
